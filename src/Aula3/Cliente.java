@@ -1,16 +1,16 @@
-package aula2;
+package Aula3;
 
 //javabeens: quando a classe só contem atributos e metodos contrutores 
 public class Cliente {
 
 	private String nomeTitular, cpfTitular, rgTitular, enderecoTitular;
 
-	// construtor vazio
+	//construtor vazio
 	public Cliente() {
-
+		
 	}
-
-	// construtor
+	
+	//construtor
 	public Cliente(String nomeTitular, String cpfTitular, String rgTitular, String enderecoTitular) {
 		this.nomeTitular = nomeTitular;
 		this.cpfTitular = cpfTitular;
