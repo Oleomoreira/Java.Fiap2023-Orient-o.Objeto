@@ -27,13 +27,11 @@ public class ContaCorrente extends Conta {
 		System.out.println("Saldo Total: R$" + saldoTotal + "\n");
 	}
 
-	public void investir(double valor, String tipo) {
-		if (tipo == "CDB") {
-			float rendimento = (float) (valor * 1.1375);
-		} else if (tipo == "LCA") {
-			float rendimento = (float) (valor * 1.09);
-		} else if (tipo == "CDB") {
-			float rendimento = (float) (valor * 1.095);
+	public void investir(String cdb, double valor ) {
+		boolean teste = this.sacar(valor);
+		if(teste==true) {
+			this.saldoInvestimento += cdb.
+		
 		}
 
 	}
