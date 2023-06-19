@@ -3,46 +3,64 @@ package fabricaveiculos;
 import java.util.Date;
 
 public abstract class Veiculo {
-
-	protected String tipoPneu, numeroSerie, cor, placa, porte, modelo;
-	protected Date dataFabricacao;
-	protected double limiteVeiculo, valorVeiculo, velocidadeVeiculo;
-	private static long contador;
-	protected int status;
 	
-	public Veiculo(String tipoPneu, String numeroSerie, String cor, String placa, String porte, String modelo,
-			Date dataFabricacao, double limiteVeiculo, double valorVeiculo, double velocidadeVeiculo, int satus) {
+	public static Long qtdfabricada = 0L;
+	
+	private String chassi;
+	private String placa;
+	private String cor;
+	private String modelo;
+	private Date dataFabricacao;
+	protected boolean isLigado;
+	public Veiculo(String chassi, String placa, String cor, String modelo, Date dataFabricacao, boolean isLigado) {
 		super();
-		this.tipoPneu = tipoPneu;
-		this.numeroSerie = numeroSerie;
-		this.cor = cor;
+		this.chassi = chassi;
 		this.placa = placa;
-		this.porte = porte;
+		this.cor = cor;
 		this.modelo = modelo;
 		this.dataFabricacao = dataFabricacao;
-		this.limiteVeiculo = limiteVeiculo;
-		this.valorVeiculo = valorVeiculo;
-		this.velocidadeVeiculo = velocidadeVeiculo;
-		this.status = status;
-		
-		contador++;
+		this.isLigado = isLigado;
 	}
-	
-	//metódo para ligar o veiculo
-	
-	public boolean status(int valor) {
-		if (valor == 1) {
-			if (this.status = ligado) {
-				this.saldo -= valor;
-				// ou this.saldo - valor;
-				return true;
-			}
-			return false;
-		}
-		return false;
+	public String getChassi() {
+		return chassi;
 	}
+	public void setChassi(String chassi) {
+		this.chassi = chassi;
 	}
+	public String getPlaca() {
+		return placa;
+	}
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	public String getCor() {
+		return cor;
+	}
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public Date getDataFabricacao() {
+		return dataFabricacao;
+	}
+	public void setDataFabricacao(Date dataFabricacao) {
+		this.dataFabricacao = dataFabricacao;
+	}
+	public boolean isLigado() {
+		return isLigado;
+	}
+	public void setLigado(boolean isLigado) {
+		this.isLigado = isLigado;
+	} 
 	
 	
-	}
-
+	
+	
+	
+	
+}
