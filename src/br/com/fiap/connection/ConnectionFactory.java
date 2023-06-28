@@ -1,4 +1,4 @@
-package ConexãoComBanco;
+package br.com.fiap.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,8 +11,7 @@ public class ConnectionFactory {
 		try {
 			return DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl", "tm_leonardo_oliveira","300505");
 		} catch (SQLException e) {
-			System.out.println("Erro ao conectar");
-			throw new RuntimeException(e);		
+			throw new RuntimeException();		
 		}
 		
 	}
